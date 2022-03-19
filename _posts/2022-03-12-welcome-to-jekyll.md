@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Redretro
+title:  "Redretro"
 date:   2022-03-12 16:54:58 -0600
 categories: jekyll update
 ---
