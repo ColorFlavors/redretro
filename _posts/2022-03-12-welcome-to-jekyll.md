@@ -1,9 +1,16 @@
 ---
 layout: post
-title:  "Redretro"
+title:  "mas mierda"
 date:   2022-03-12 16:54:58 -0600
 categories: jekyll update
 ---
+puta mideradasd a
+f
+adf açdofklç gfjs kfgj f
+gf
+g s
+fgsfgsf
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
