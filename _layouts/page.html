@@ -6,7 +6,6 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
-
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
@@ -134,12 +133,11 @@ layout: table_wrappers
         {% endif %}
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
-        <div class= "d-flex mb-1 v-align-bottom">
-          <div class = "v-align-bottom"><img src="../../../assets/images/{{ page.title }}.png" alt="{{page.title}}">  </div>
-          <div class = "flex-justify-end ml-3 mt-8 "><h1 clas = "v-align-text-bottom"> {{page.title}} </h1></div>
-
+        <div>
+          <h1 class="lh-1"> {{page.title}} </h1>
+        
+          <br>
         </div>
-
 
 
         {% if site.heading_anchors != false %}
@@ -150,18 +148,13 @@ layout: table_wrappers
 
         {% endif %}
 
-        {% if page.has_children == true and page.has_toc != false %}
-          <hr>
-          <h2 class="text-delta">Más acciones</h2>
-          <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
-            {% for child in children_list %}
-              <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
+        <script src="https://utteranc.es/client.js"
+                repo="[ENTER REPO HERE]"
+                issue-term="title"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
 
         {% capture footer_custom %}
           {%- include footer_custom.html -%}

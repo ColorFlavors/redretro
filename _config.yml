@@ -37,11 +37,53 @@ plugins:
 
 
 remote_theme: just-the-docs/just-the-docs
-logo: "/assets/images/redretro_logo.svg"
+logo: /assets/images/redretro_logo.svg
 color_scheme: red
 back_to_top: true
 back_to_top_text: "Arriba"
 footer_content: ""
+heading_anchors: false
+# Define Jekyll collections
+collections:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+  accion:
+    permalink: "/:categories/:title/"
+  afuera:
+    permalink: "/:collection/:path/"
+    output: true
+    order:
+      - textos.md
+      - about.md
+      - proxima.md
+      - redes-sociales.md
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name:
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+    afuera:
+      # Give the collection a name
+      name: otros
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: true
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+
+
 
 
 # Exclude from processing.
