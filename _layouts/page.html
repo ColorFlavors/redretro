@@ -135,7 +135,7 @@ layout: table_wrappers
       <div id="main-content" class="main-content" role="main">
         <div>
           <h1 class="lh-1"> {{page.title}} </h1>
-        
+
           <br>
         </div>
 
@@ -147,20 +147,14 @@ layout: table_wrappers
           {{ content }}
 
         {% endif %}
-
-        <script src="https://utteranc.es/client.js"
-                repo="[ENTER REPO HERE]"
-                issue-term="title"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
-        </script>
+      
 
         {% capture footer_custom %}
           {%- include footer_custom.html -%}
         {% endcapture %}
         {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
           <hr>
+
           <footer>
             {% if site.back_to_top %}
               <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>

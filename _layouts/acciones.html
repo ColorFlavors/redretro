@@ -134,12 +134,13 @@ layout: table_wrappers
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
         <div>
-          <h1 class="lh-1"> <span class="fs-7">{{ page.numero }}</span> <span class="text-grey-lt-300">|</span> <span class="fw-500"> {{ page.estacion }} </span>
+          <h1 class="lh-1"> <span class="fs-7">{{ page.slug }}</span> <span class="text-grey-lt-300">|</span> <span class="fw-500"> {{ page.title }} </span>
              <span class="text-grey-lt-300">|</span> <span class=""> {{ page.original }} </span> </h1>
           <h3 class="lh-0 mt-3"><span class="text-red-300"> #{{ page.operacion }}</span> <span class="text-grey-lt-300">|</span> {{ page.year }} </h3>
           <br>
+
         </div>
-        
+
 
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
@@ -148,9 +149,10 @@ layout: table_wrappers
           {{ content }}
 
         {% endif %}
-
+        {%- include share-page.html -%}
         {% if page.has_children == true and page.has_toc != false %}
           <hr>
+
           <h2 class="text-delta">Más acciones</h2>
           <ul>
             {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}

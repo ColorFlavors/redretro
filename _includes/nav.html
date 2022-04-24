@@ -120,9 +120,13 @@
 <ul class="nav-list ">
 
   {% for page in site.docs %}
-   <li class="nav-list-item">
-     <a href="/redretro{{ page.url}}">{{ page.numero }}</a>
-   </li>
+    {% if page.url contains 'index' %}
+      {% comment %}Do nothing{% endcomment %}
+      {% else %}
+         <li class="nav-list-item">
+           <a href="/redretro{{ page.url}}">{{ page.slug }}</a>
+         </li>
+       {% endif %}
   {% endfor %}
 </ul>
 </div>

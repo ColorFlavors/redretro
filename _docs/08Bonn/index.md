@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bonn
+city: bonn
 nav_order: 8
 has_children: true
 ---
@@ -8,4 +9,3 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ## Acciones
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-![](../../assets/images/test.jpg)
